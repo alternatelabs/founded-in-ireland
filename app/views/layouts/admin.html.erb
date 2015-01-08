@@ -54,6 +54,9 @@
 
 	    <div class="page-content">
 	      <div class="wrapper">
+
+          <%= render 'admin/partials/head' if current_user.present? %>
+
 	        <%= yield %>
 	      </div>
 	    </div>
