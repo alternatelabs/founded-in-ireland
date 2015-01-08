@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%# <meta name="description" content="{{ site.description }}"> %>
+    <meta name="keywords" content="Ireland, Ireland, Europe, startups, entrepreneurs, innovation" />
+
+    <meta property="og:title" content="Founded in Ireland - The most innovative startups in Ireland" />
+    <meta property="og:description" content="Ireland is Europe's hot new startup scene. We list innovative startups with Irish roots." />
+    <meta property="og:site_name" content="Founded in Ireland" />
+    <meta property="og:image" content="http://foundedinireland.com/static/images/avatar.png" />
+
+    <meta name="twitter:site" content="@foundedireland" />
+    <meta name="twitter:title" content="Founded in Ireland - The most innovative startups in Ireland" />
+
+    <meta name="author" content="Andrew Fulton" />
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+
+    <%# <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"> %>
+
+    <title>Founded In Ireland</title>
+
+    <meta property="og:url" content="http://foundedinireland.com/" />
+    <meta property="og:type" content="website" />
+
+    <script>
+	    /**
+	    * Function that tracks a click on an outbound link in Google Analytics.
+	    */
+	    var trackOutboundLink = function(url) {
+	       ga('send', 'event', 'outbound', 'click', url);
+	    }
+    </script>
+
+    <%= csrf_meta_tags %>
+</head>
+
+
+  <body>
+    <div class="container">
+      <header class="clearfix">
+		  <a href="http://foundedinireland.com" class="no-link"><%= image_tag "fii-logo.png", width: 500, alt: "Founded in Ireland" %></a>
+
+		  <h1>Founded in Ireland - The most innovative startups in Ireland</h1>
+		  <span>Ireland has a fast growing startup scene.
+		    Inspired by <a href="http://foundedinholland.com" target="_blank">Founded in Holland</a>, this list is dedicated to promote Irish innovative startups that promise to inspire.</span>
+		  <span class="apply">Want to join this list? <a href="#join">Submit&nbsp;your&nbsp;Irish&nbsp;startup.</a></span>
+
+		</header>
+
+
+      <div class="page-content">
+        <div class="wrapper">
+          <%= yield %>
+        </div>
+      </div>
+
+      <footer>
+			  <span>All the logos and trademarks used on this website belong to its rightful owner.<br></span>
+			    <a href="http://foundedx.com" class="no-link" target="_blank">
+			    	<%= image_tag "foundedx-badge.png", alt: "FoundedX" %>
+			    </a>
+			</footer>
+    </div>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+    <!-- TODO google analytics -->
+
+  </body>
+
+</html>
