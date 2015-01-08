@@ -42,19 +42,19 @@
 
   <body>
     <div class="container">
+
+      <%= render "partials/flash_messages" %>
+
       <header class="clearfix">
-		  <a href="http://foundedinireland.com" class="no-link"><%= image_tag "fii-logo.png", width: 500, alt: "Founded in Ireland" %></a>
+  		  <a href="http://foundedinireland.com" class="no-link"><%= image_tag "fii-logo.png", width: 500, alt: "Founded in Ireland" %></a>
 
-		  <h1>Founded in Ireland - The most innovative startups in Ireland</h1>
+  		  <h1>Founded in Ireland - The most innovative startups in Ireland</h1>
 
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+  		  <span>Ireland has a fast growing startup scene.
+  		    Inspired by <a href="http://foundedinholland.com" target="_blank">Founded in Holland</a>, this list is dedicated to promote Irish innovative startups that promise to inspire.</span>
+  		  <span class="apply">Want to join this list? <a href="#join">Submit&nbsp;your&nbsp;Irish&nbsp;startup.</a></span>
 
-		  <span>Ireland has a fast growing startup scene.
-		    Inspired by <a href="http://foundedinholland.com" target="_blank">Founded in Holland</a>, this list is dedicated to promote Irish innovative startups that promise to inspire.</span>
-		  <span class="apply">Want to join this list? <a href="#join">Submit&nbsp;your&nbsp;Irish&nbsp;startup.</a></span>
-
-		</header>
+  		</header>
 
 
       <div class="page-content">

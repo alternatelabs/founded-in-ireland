@@ -42,21 +42,18 @@
 
   <body>
     <div class="container">
+
+      <%= render "partials/flash_messages" %>
+
       <header class="clearfix">
 			  <a href="http://foundedinireland.com" class="no-link"><%= image_tag "fii-logo.png", width: 500, alt: "Founded in Ireland" %></a>
 
 			  <h1>Founded in Ireland - The most innovative startups in Ireland</h1>
-
-	  	  <p class="notice"><%= notice %></p>
-	  	  <p class="alert"><%= alert %></p>
-
 			</header>
 
-	    <div class="page-content">
+	    <div class="page-content admin">
+        <%= render 'admin/partials/head' if current_user.present? %>
 	      <div class="wrapper">
-
-          <%= render 'admin/partials/head' if current_user.present? %>
-
 	        <%= yield %>
 	      </div>
 	    </div>
