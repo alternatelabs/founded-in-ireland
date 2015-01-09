@@ -74,4 +74,17 @@
 	textarea {
 		min-height: 80px;
 	}
+
+	input[type=submit] {
+		cursor: pointer;
+		background: #233F32;
+		color: #fff;
+		font-size: 16px;
+		font-family: Lato, Calibri, Arial, sans-serif;
+		padding: 10px 0;
+	}
+
+	a.delete {
+		background: #af0909;
+	}
 }

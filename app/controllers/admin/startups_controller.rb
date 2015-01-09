@@ -9,6 +9,10 @@ module Admin
     def edit
     end
 
+    def show
+      redirect_to edit_admin_startup_path params[:id]
+    end
+
     def update
       if @startup.update(startup_params)
         redirect_to admin_startups_path, notice: 'Startup was updated'
@@ -18,6 +22,8 @@ module Admin
     end
 
     def destroy
+      @startup.destroy!
+      redirect_to admin_startups_path, notice: 'Startup has been deleted'
     end
 
     private

@@ -16,7 +16,7 @@
   <hr>
 
   <p>Contact Name: <%= @startup.contact_name %></p>
-  <p>Contact Email: <%= @startup.contact_email %></p>
+  <p>Contact Email: <%= link_to @startup.contact_email, 'mailto:' + @startup.contact_email %></p>
   <p>Extra Information:<br><%= @startup.extra_info %></p>
 
   <hr>
@@ -24,3 +24,5 @@
   <%= f.button :submit %>
 
 <% end %>
+
+<%= link_to 'Delete Startup', admin_startup_path(@startup), method: :delete, class: 'delete', "data-confirm" => "Are you sure you want to delete this?" %>
