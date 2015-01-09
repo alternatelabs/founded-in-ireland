@@ -9,7 +9,7 @@ namespace :typeform do
     r = MultiJson.load(r)
 
     r['responses'].each do |startup|
-      Startup.createFromTypeform startup['answers']
+      Startup.create_from_typeform startup['answers']
     end
 
     Metadata.set('typeform_checked_at', Time.now.to_i)

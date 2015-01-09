@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
-  
+
   devise_for :users
 
   root "pages#home"
 
   namespace :admin do
     root "dashboard#index"
+
+    resources :startups
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
