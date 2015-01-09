@@ -1,7 +1,7 @@
 <h2>Edit Startup</h2>
 <hr>
 
-<%= simple_form_for(@startup, url: admin_startup_path, method: :post) do |f| %>
+<%= simple_form_for(@startup, url: admin_startup_path, method: :put) do |f| %>
 
   <%= f.input :name %>
   <%= f.input :year_founded %>
