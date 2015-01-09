@@ -44,6 +44,9 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    dotenv (1.0.2)
+    dotenv-rails (1.0.2)
+      dotenv (= 1.0.2)
     erubis (2.7.0)
     execjs (2.2.2)
     hike (1.2.3)
@@ -60,6 +63,7 @@ GEM
     mime-types (2.4.3)
     minitest (5.5.0)
     multi_json (1.10.1)
+    netrc (0.8.0)
     orm_adapter (0.5.0)
     pg (0.17.1)
     rack (1.5.2)
@@ -85,6 +89,9 @@ GEM
       json (~> 1.4)
     responders (1.0.0)
       railties (>= 3.2, < 5)
+    rest-client (1.7.2)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     sass (3.2.19)
     sass-rails (4.0.5)
       railties (>= 4.0.0, < 5.0)
@@ -123,10 +130,13 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
+  dotenv-rails (~> 1.0.2)
   jbuilder (~> 2.0)
   jquery-rails
+  multi_json (~> 1.10.1)
   pg
   rails (= 4.1.8)
+  rest-client (~> 1.7.2)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring

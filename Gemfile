@@ -39,3 +39,6 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'devise'
+gem 'dotenv-rails', '~> 1.0.2'
+gem 'rest-client', '~> 1.7.2'
+gem 'multi_json', '~> 1.10.1'
