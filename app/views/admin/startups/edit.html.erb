@@ -1,0 +1,26 @@
+<h2>Edit Startup</h2>
+<hr>
+
+<%= simple_form_for(@startup, url: admin_startup_path, method: :post) do |f| %>
+
+  <%= f.input :name %>
+  <%= f.input :year_founded %>
+  <%= f.input :location %>
+  <%= f.input :description %>
+  <%= f.input :url, label: 'Website URL' %>
+  <%= f.input :twitter, label: 'Twitter handle' %>
+  <p>Logo URL: <a href="<%= @startup.logo_url %>" target="_blank"><%= @startup.logo_url %></a></p>
+  <%= f.input :uploaded_logo, as: 'file', label: 'Upload Logo' %>
+  <%= f.input :status, collection: ['pending', 'active'] %>
+
+  <hr>
+
+  <p>Contact Name: <%= @startup.contact_name %></p>
+  <p>Contact Email: <%= @startup.contact_email %></p>
+  <p>Extra Information:<br><%= @startup.extra_info %></p>
+
+  <hr>
+
+  <%= f.button :submit %>
+
+<% end %>

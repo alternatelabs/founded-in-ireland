@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <td>Startup Name</td>
+      <td>Status</td>
+      <td>Options</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @startups.each do |startup| %>
+      <tr>
+        <td><%= startup.name %></td>
+        <td><%= startup.status %></td>
+        <td><%= link_to "Edit", edit_admin_startup_path(startup) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
