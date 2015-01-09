@@ -5,12 +5,14 @@ namespace :typeform do
     t = Typeform.new(ENV.fetch("TYPEFORM_UID"), ENV.fetch("TYPEFORM_API_KEY"))
 
     # TODO Get latest start up id and add it to the endpoint
-    r = RestClient.get(t.endpoint + '&completed=true')
-    r = MultiJson.load(r)
+    last_check = Metadata.get('typeform_checked_at');
 
-    r['responses'].each do |startup|
-      puts startup['answers']
-    end
+    # r = RestClient.get(t.endpoint + '&completed=true')
+    # r = MultiJson.load(r)
+
+    # r['responses'].each do |startup|
+    #   puts startup['answers']
+    # end
   end
 
 end
