@@ -1,18 +1,14 @@
 class Startup < ActiveRecord::Base
 
   def self.createFromTypeform answers
-    instance = self.new
-
-    typeform_fields = eval(ENV.fetch('TYPEFORM_FIELDS'))
-
     data = {}
-    typeform_fields.each do |k, v|
-      # puts "#{k} = #{answers[v]}"
+    eval(ENV.fetch('TYPEFORM_FIELDS')).each do |k, v|
       data[k] = answers[v]
     end
 
-    puts data
+    startup = create(data)
 
+    startup
   end
 
 end
