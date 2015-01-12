@@ -1,5 +1,18 @@
 .right-text { text-align: right }
 
+.login-box {
+	max-width: 400px;
+	margin: 0 auto;
+
+	input[type=checkbox] {
+		width: auto;
+	}
+
+	label.inline {
+		display: inline;
+	}
+}
+
 .admin {
 	max-width: 90%;
 	margin: 0 auto;

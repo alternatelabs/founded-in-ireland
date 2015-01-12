@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root "dashboard#index"
 
-    resources :startups
+    resources :startups, :pages
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

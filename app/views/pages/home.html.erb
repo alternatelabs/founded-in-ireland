@@ -1,85 +1,15 @@
 <ul class="cbp-rfgrid">
 
-  <li>
-    <a href="https://nuu.in" target="_blank">
-      <%= image_tag "logos/nuu-avatar.jpg", alt: "Nuu" %>
-      <div>
-        <h3>Nuu</h3>
-      </div>
-    </a>
-  </li>
-
-  <li>
-    <a href="https://clinch.io/" target="_blank">
-      <%= image_tag "logos/clinch.png", alt: "Clinch" %>
-      <div>
-        <h3>Clinch</h3>
-      </div>
-    </a>
-  </li>
-
-  <li>
-    <a href="http://www.gochain.com" target="_blank">
-      <%= image_tag "logos/chain.jpg", alt: "Chain" %>
-      <div>
-        <h3>Chain</h3>
-      </div>
-    </a>
-  </li>
-
-  <li>
-    <a href="https://getinvited.to/" target="_blank">
-      <%= image_tag "logos/getinvited.png", alt: "GetInvited" %>
-      <div>
-        <h3>Get invited</h3>
-      </div>
-    </a>
-  </li>
-
-  <li>
-    <a href="http://woop.ie/" target="_blank">
-      <%= image_tag "logos/woopie.png", alt: "Woopie" %>
-      <div>
-        <h3>Woopie</h3>
-      </div>
-    </a>
-  </li>
-
-  <li>
-    <a href="http://clouddock.co/" target="_blank">
-      <%= image_tag "logos/clouddock.png", alt: "Cloud Dock" %>
-      <div>
-        <h3>Cloud Dock</h3>
-      </div>
-    </a>
-  </li>
-
-  <li>
-    <a href="http://www.thoughtboxlearning.net/" target="_blank">
-      <%= image_tag "logos/thoughtbox.png", alt: "ThoughtBox" %>
-      <div>
-        <h3>Thought Box</h3>
-      </div>
-    </a>
-  </li>
-
-  <li>
-    <a href="http://www.sensum.co/" target="_blank">
-      <%= image_tag "logos/sensum.png", alt: "Sensum" %>
-      <div>
-        <h3>Sensum</h3>
-      </div>
-    </a>
-  </li>
-
-  <li>
-    <a href="http://aylien.com/" target="_blank">
-      <%= image_tag "logos/aylien.png", alt: "Aylien" %>
-      <div>
-        <h3>Aylien</h3>
-      </div>
-    </a>
-  </li>
+  <% @startups.each do |startup| %>
+    <li>
+      <a href="<%= startup.url %>" target="_blank">
+        <%= image_tag startup.uploaded_logo.url(:standard), alt: startup.name %>
+        <div>
+          <h3><%= startup.name %></h3>
+        </div>
+      </a>
+    </li>
+  <% end %>
 
 </ul>
 

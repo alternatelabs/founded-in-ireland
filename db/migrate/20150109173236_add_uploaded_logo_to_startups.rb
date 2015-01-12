@@ -1,7 +1,8 @@
 class AddUploadedLogoToStartups < ActiveRecord::Migration
   def change
-    change_table :startups do |t|
-      t.string :uploaded_logo, :after => :status
-    end
+    add_column :startups, :uploaded_logo_file_name, :string
+    add_column :startups, :uploaded_logo_file_size, :string
+    add_column :startups, :uploaded_logo_content_type, :string
+    add_column :startups, :uploaded_logo_updated_at, :string
   end
 end
