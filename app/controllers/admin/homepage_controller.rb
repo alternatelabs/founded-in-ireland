@@ -10,11 +10,5 @@ module Admin
       redirect_to admin_homepage_edit_path, notice: 'Homepage content has been updated'
     end
 
-    private
-
-      def fields
-
-      end
-
   end
 end
