@@ -15,7 +15,7 @@ module Admin
 
     def update
       if @startup.update(startup_params)
-        redirect_to admin_startups_path, notice: 'Startup was updated'
+        redirect_to edit_admin_startup_path(@startup), notice: 'Startup was updated'
       else
         render :edit
       end

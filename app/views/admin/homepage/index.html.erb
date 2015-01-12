@@ -6,11 +6,8 @@
 
   <% @homepage.each do |key,val| %>
     <label><%= key.humanize %></label>
-    <textarea name="<%= key %>"><%= val %></textarea>
+    <textarea name="<%= key %>" class="wysiwyg"><%= val %></textarea>
   <% end %>
 
   <input type="submit" value="Update Homepage" />
 </form>
-<%# simple_form_for(@homepage, url: admin_homepage_edit_path, method: :put) do |f| %>
-
-<%# end %>

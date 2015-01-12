@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root "dashboard#index"
 
-    resources :startups, :pages
+    resources :startups, :pages, :posts
 
     get 'homepage' => 'homepage#index', as: 'homepage_edit'
     post 'homepage' => 'homepage#update'

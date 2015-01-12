@@ -4,7 +4,7 @@
 //= require redactor.min
 
 $(document).ready(function(){
-  $('textarea').redactor({
+  $('textarea.wysiwyg').redactor({
     buttons: ['html', 'formatting', 'bold', 'italic']
   });
 });

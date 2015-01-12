@@ -14,7 +14,7 @@ module Admin
       @page = Page.create(page_params)
 
       if @page.save
-        redirect_to admin_pages_path, notice: "New page has been created"
+        redirect_to edit_admin_page_path(@page), notice: "New page has been created"
       else
         flash[:error] = "There were some errors creating the page"
         render :new
@@ -26,7 +26,7 @@ module Admin
 
     def update
       if @page.update(page_params)
-        redirect_to admin_pages_path, notice: "Page has been updated"
+        redirect_to edit_admin_page_path(@page), notice: "Page has been updated"
       else
         flash[:error] = "There were some errors updating the page"
         render :edit

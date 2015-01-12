@@ -1,6 +1,6 @@
 <%= f.input :title %>
 <%= f.input :slug, label: "Slug (this cannot be updated)" unless @page.id.present? %>
-<%= f.input :content %>
+<%= f.input :content, input_html: { class: 'wysiwyg' } %>
 
 <hr>
 
