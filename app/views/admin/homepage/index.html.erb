@@ -5,7 +5,7 @@
   <%= form_tag 'url' %>
 
   <% @homepage.each do |key,val| %>
-    <label><%= key %></label>
+    <label><%= key.humanize %></label>
     <textarea name="<%= key %>"><%= val %></textarea>
   <% end %>
 

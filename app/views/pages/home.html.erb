@@ -1,9 +1,5 @@
 <% content_for :header_content do %>
-  <h1>Founded in Ireland - The most innovative startups in Ireland</h1>
-
-  <span>Ireland has a fast growing startup scene.
-    Inspired by <a href="http://foundedinholland.com" target="_blank">Founded in Holland</a>, this list is dedicated to promote Irish innovative startups that promise to inspire.</span>
-  <span class="apply">Want to join this list? <a href="#join">Submit&nbsp;your&nbsp;Irish&nbsp;startup.</a></span>
+  <%= @homepage['homepage_header_content'].html_safe %>
 <% end %>
 
 <ul class="cbp-rfgrid">
@@ -22,15 +18,5 @@
 </ul>
 
 <% content_for :footer_content do %>
-  <span>
-    <strong>What do all these companies have in common?</strong><br>
-    1) They were founded in Ireland in the 21st century<br>
-    2) They have the ambition to transform their industry<br>
-    3) None of the founders are leprechaun’s<br><br>
-    Does your startup meet these criteria and do you want to support this initiative?<br>
-    <strong>Submit your Irish startup by filling out the <a class="typeform-share link" href="https://foundedinireland.typeform.com/to/OVNppC" data-mode="2" target="_blank">application&nbsp;form</a>.</strong>
-    <br>
-    <strong>Do you know an innovative startup? <a class="typeform-share link" href="mailto:andrew@foundedinireland.com" data-mode="2" target="_blank">Let us know it</a>.</strong>
-  </span>
-  <br><br><br>
+  <%= @homepage['homepage_footer_content'].html_safe %>
 <% end %>

@@ -2,6 +2,7 @@ class PagesController < ApplicationController
 
 	def home
     @startups = Startup.get_active
+    @homepage = Metadata.get_group 'homepage_group'
 	end
 
   def show
