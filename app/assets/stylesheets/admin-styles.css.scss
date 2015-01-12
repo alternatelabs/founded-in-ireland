@@ -1,4 +1,5 @@
 $red: #af0909;
+$dark_green: #233f32;
 
 .right-text { text-align: right }
 
@@ -125,10 +126,16 @@ $red: #af0909;
 }
 
 .redactor_box {
+	margin-bottom: 20px;
+
 	.redactor_toolbar {
-	  background: #000;
+	  background: $dark_green;
 
 	  li a {
+	  	background: $dark_green;
+	  	color: #fff;
+	  }
+	  li a:hover {
 	  	background: #000;
 	  	color: #fff;
 	  }
@@ -136,6 +143,10 @@ $red: #af0909;
 
 	.redactor_editor {
 		color: #000;
+
+		a {
+			background: #fff;
+		}
 	}
 }
 
