@@ -1,0 +1,32 @@
+<h2>List Posts</h2>
+<hr>
+
+<%= render 'nav' %>
+
+<% unless @posts.present? %>
+  <p>No posts created yet.</p>
+<% else %>
+
+  <table>
+    <thead>
+      <tr>
+        <td>Post Title</td>
+        <td>Post Slug</td>
+        <td>Status</td>
+        <td>Options</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @posts.each do |post| %>
+        <tr>
+          <td><%= post.title %></td>
+          <td><%= post.slug %></td>
+          <td><%= post.status %></td>
+          <td><%= link_to "Edit", edit_admin_post_path(post) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+
+<% end %>

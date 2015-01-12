@@ -1,0 +1,10 @@
+<h2>Edit Post</h2>
+<hr>
+
+<%= render 'nav' %>
+
+<%= simple_form_for(@post, url: admin_post_path(@post), method: :put) do |f| %>
+  <%= render 'form', :f => f %>
+<% end %>
+
+<%= link_to 'Delete Post', admin_post_path(@post), method: :delete, class: 'delete', "data-confirm" => "Are you sure you want to delete this?" %>
