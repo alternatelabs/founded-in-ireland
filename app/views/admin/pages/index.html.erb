@@ -8,21 +8,29 @@
 
 <hr>
 
-<table>
-  <thead>
-    <tr>
-      <td>Page Title</td>
-      <td>Page Slug</td>
-      <td>Options</td>
-    </tr>
-  </thead>
-  <tbody>
-    <% @pages.each do |page| %>
+<% unless @pages.present? %>
+
+  <p>No pages have been created yet</p>
+
+<% else %>
+
+  <table>
+    <thead>
       <tr>
-        <td><%= page.title %></td>
-        <td><%= page.slug %></td>
-        <td><%= link_to "Edit", edit_admin_page_path(page) %></td>
+        <td>Page Title</td>
+        <td>Page Slug</td>
+        <td>Options</td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @pages.each do |page| %>
+        <tr>
+          <td><%= page.title %></td>
+          <td><%= page.slug %></td>
+          <td><%= link_to "Edit", edit_admin_page_path(page) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<% end %>

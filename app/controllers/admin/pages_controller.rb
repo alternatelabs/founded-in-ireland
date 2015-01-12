@@ -33,6 +33,11 @@ module Admin
       end
     end
 
+    def destroy
+      @page.destroy!
+      redirect_to admin_pages_path, notice: 'Page has been deleted'
+    end
+
     private
 
       def set_page
