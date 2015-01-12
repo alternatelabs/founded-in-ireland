@@ -46,10 +46,10 @@
       <%= render "partials/flash_messages" %>
 
       <header class="clearfix">
-			  <a href="http://foundedinireland.com" class="no-link"><%= image_tag "fii-logo.png", width: 500, alt: "Founded in Ireland" %></a>
+            <%= link_to image_tag("fii-logo.png", width: 500, alt: "Founded in Ireland"), root_path, class: "no-link" %>
 
-			  <h1>Founded in Ireland - The most innovative startups in Ireland</h1>
-			</header>
+			<h1>Founded in Ireland - The most innovative startups in Ireland</h1>
+		</header>
 
 	    <div class="page-content admin">
         <%= render 'admin/partials/head' if current_user.present? %>

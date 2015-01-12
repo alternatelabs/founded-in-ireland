@@ -8,6 +8,9 @@ Rails.application.routes.draw do
     root "dashboard#index"
 
     resources :startups, :pages
+
+    get 'homepage' => 'homepage#index', as: 'homepage_edit'
+    post 'homepage' => 'homepage#update'
   end
 
   get ':slug' => 'pages#show'

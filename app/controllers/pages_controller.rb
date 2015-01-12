@@ -6,9 +6,9 @@ class PagesController < ApplicationController
 
   def show
     @page = Page.get_by_slug(params[:slug])
-
     raise "Could not find page" unless @page.present?
-    #TODO throw error if nil
+
+    render 'default'
   end
 
 end

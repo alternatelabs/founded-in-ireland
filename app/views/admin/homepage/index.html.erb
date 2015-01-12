@@ -1,0 +1,16 @@
+<h2>Edit Homepage Content</h2>
+<hr>
+
+<form action="<%= admin_homepage_edit_path %>" method="post">
+  <%= form_tag 'url' %>
+
+  <% @homepage.each do |key,val| %>
+    <label><%= key %></label>
+    <textarea name="<%= key %>"><%= val %></textarea>
+  <% end %>
+
+  <input type="submit" value="Update Homepage" />
+</form>
+<%# simple_form_for(@homepage, url: admin_homepage_edit_path, method: :put) do |f| %>
+
+<%# end %>

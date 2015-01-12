@@ -1,12 +1,7 @@
 <h2>List Pages</h2>
 <hr>
 
-<ul class="sub-nav">
-  <li><%= link_to "List Pages", admin_pages_path %></li>
-  <li><%= link_to "New Page", new_admin_page_path %></li>
-</ul>
-
-<hr>
+<%= render 'nav' %>
 
 <% unless @pages.present? %>
 
