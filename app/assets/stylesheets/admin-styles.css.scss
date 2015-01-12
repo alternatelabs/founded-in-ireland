@@ -1,3 +1,5 @@
+$red: #af0909;
+
 .right-text { text-align: right }
 
 .login-box {
@@ -11,6 +13,14 @@
 	label.inline {
 		display: inline;
 	}
+}
+
+.error {
+	display: block;
+	padding: 5px;
+	margin-bottom: 10px;
+	background: $red;
+	color: #fff;
 }
 
 .admin {
@@ -81,7 +91,7 @@
 		border: 0;
 		padding: 5px;
 		margin-bottom: 10px;
-		width: 100%;
+		width: 100% !important;
 	}
 
 	textarea {
@@ -98,6 +108,6 @@
 	}
 
 	a.delete {
-		background: #af0909;
+		background: $red;
 	}
 }

@@ -1,0 +1,7 @@
+<%= f.input :title %>
+<%= f.input :slug, label: "Slug (this cannot be updated)" unless @page.id.present? %>
+<%= f.input :content %>
+
+<hr>
+
+<%= f.button :submit %>

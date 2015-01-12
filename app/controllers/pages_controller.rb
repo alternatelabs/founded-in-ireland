@@ -4,4 +4,11 @@ class PagesController < ApplicationController
     @startups = Startup.get_active
 	end
 
+  def show
+    @page = Page.get_by_slug(params[:slug])
+
+    raise "Could not find page" unless @page.present?
+    #TODO throw error if nil
+  end
+
 end
