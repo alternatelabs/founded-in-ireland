@@ -1,0 +1,8 @@
+<h2>Edit Page</h2>
+<hr>
+
+<%= render 'nav' %>
+
+<%= render 'form' %>
+
+<%= link_to 'Delete Page', admin_page_path(@page), method: :delete, class: 'delete', "data-confirm" => "Are you sure you want to delete this?" %>

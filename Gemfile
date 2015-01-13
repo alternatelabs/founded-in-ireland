@@ -38,3 +38,13 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'devise'
+gem 'dotenv-rails', '~> 1.0.2'
+gem 'rest-client', '~> 1.7.2'
+gem 'multi_json', '~> 1.10.1'
+gem 'simple_form'
+gem 'sanitize'
+
+# File uploads
+gem 'paperclip', '~> 4.2'
+gem 'aws-sdk', '~> 1.5.7'

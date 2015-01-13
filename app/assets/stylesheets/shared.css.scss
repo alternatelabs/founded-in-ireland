@@ -1,0 +1,42 @@
+.alert {
+	width: 100%;
+	text-align: center;
+	padding: 10px 0;
+	background: #fff;
+	color: #454545;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+p.date {
+  font-size: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+h2.post-title {
+  margin-top: 0;
+}
+
+.post-links {
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.5);
+  border-left: 0;
+  border-right: 0;
+  padding: 20px 0;
+  height: 70px;
+
+  .prev {
+    float: left;
+  }
+  .all {
+    float: center;
+  }
+  .next {
+    float: right;
+  }
+}

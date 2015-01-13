@@ -1,6 +1,23 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+
   root "pages#home"
+
+  namespace :admin do
+    root "dashboard#index"
+
+    resources :startups, :pages, :posts
+
+    get 'homepage' => 'homepage#index', as: 'homepage_edit'
+    post 'homepage' => 'homepage#update'
+  end
+
+  get '/blog' => 'posts#index'
+  get '/blog/:slug' => 'posts#show', as: 'blog_post'
+
+  get ':slug' => 'pages#show'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

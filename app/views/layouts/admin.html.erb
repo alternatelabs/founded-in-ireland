@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%# <meta name="description" content="{{ site.description }}"> %>
+    <meta name="keywords" content="Ireland, Ireland, Europe, startups, entrepreneurs, innovation" />
+
+    <meta property="og:title" content="Founded in Ireland - The most innovative startups in Ireland" />
+    <meta property="og:description" content="Ireland is Europe's hot new startup scene. We list innovative startups with Irish roots." />
+    <meta property="og:site_name" content="Founded in Ireland" />
+    <meta property="og:image" content="http://foundedinireland.com/static/images/avatar.png" />
+
+    <meta name="twitter:site" content="@foundedireland" />
+    <meta name="twitter:title" content="Founded in Ireland - The most innovative startups in Ireland" />
+
+    <meta name="author" content="Andrew Fulton" />
+    <%= stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track' => true %>
+
+    <%# <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"> %>
+
+    <title>Founded In Ireland</title>
+
+    <meta property="og:url" content="http://foundedinireland.com/" />
+    <meta property="og:type" content="website" />
+
+    <script>
+	    /**
+	    * Function that tracks a click on an outbound link in Google Analytics.
+	    */
+	    var trackOutboundLink = function(url) {
+	       ga('send', 'event', 'outbound', 'click', url);
+	    }
+    </script>
+
+    <%= csrf_meta_tags %>
+</head>
+
+
+  <body>
+    <div class="container">
+
+      <%= render "partials/flash_messages" %>
+
+      <header class="clearfix">
+            <%= link_to image_tag("fii-logo.png", width: 500, alt: "Founded in Ireland"), root_path, class: "no-link" %>
+
+			<h1>Founded in Ireland - The most innovative startups in Ireland</h1>
+		</header>
+
+	    <div class="page-content admin">
+        <%= render 'admin/partials/head' if current_user.present? %>
+	      <div class="wrapper">
+	        <%= yield %>
+	      </div>
+	    </div>
+    </div>
+
+    <%= javascript_include_tag 'admin', 'data-turbolinks-track' => true %>
+
+    <!-- TODO google analytics -->
+
+  </body>
+
+</html>

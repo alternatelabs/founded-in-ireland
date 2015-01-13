@@ -1,0 +1,13 @@
+<h2>Edit Homepage Content</h2>
+<hr>
+
+<form action="<%= admin_homepage_edit_path %>" method="post">
+  <%= form_tag 'url' %>
+
+  <% @homepage.each do |key,val| %>
+    <label><%= key.humanize %></label>
+    <textarea name="<%= key %>" class="wysiwyg"><%= val %></textarea>
+  <% end %>
+
+  <input type="submit" value="Update Homepage" />
+</form>
