@@ -16,7 +16,7 @@
   <hr>
 
   <p>Contact Name: <%= @startup.contact_name %></p>
-  <p>Contact Email: <%= link_to @startup.contact_email, 'mailto:' + @startup.contact_email %></p>
+  <p>Contact Email: <%= mail_to(@startup.contact_email, nil, subject: "Founded in Ireland") %></p>
   <p>Extra Information:<br><%= @startup.extra_info %></p>
 
   <hr>

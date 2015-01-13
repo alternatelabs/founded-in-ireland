@@ -13,6 +13,9 @@ Rails.application.routes.draw do
     post 'homepage' => 'homepage#update'
   end
 
+  get '/blog' => 'posts#index'
+  get '/blog/:slug' => 'posts#show', as: 'blog_post'
+
   get ':slug' => 'pages#show'
 
   # The priority is based upon order of creation: first created -> highest priority.

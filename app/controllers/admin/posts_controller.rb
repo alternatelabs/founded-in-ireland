@@ -12,7 +12,7 @@ module Admin
     end
 
     def create
-      @post = Post.new(post_params)
+      @post = current_user.posts.new(post_params)
 
       if @post.save
         redirect_to edit_admin_post_path(@post), notice: "New post has been created"

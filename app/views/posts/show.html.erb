@@ -1,0 +1,18 @@
+<div class="page">
+  <h2 class="post-title"><%= @post.title %></h2>
+  <p class="date">Posted on: <%= @post.nice_date %></p>
+
+  <div class="post-content">
+    <%= @post.content.html_safe %>
+  </div>
+
+  <div class="post-links">
+
+    <%= link_to "Previous post", blog_post_path(@post.prev.slug), class: "prev" if @post.prev.present? %>
+
+    <%# link_to "List all posts", blog_path, class: "all" %>
+
+    <%= link_to "Next post", blog_post_path(@post.next.slug), class: "next" if @post.next.present? %>
+
+  </div>
+</div>

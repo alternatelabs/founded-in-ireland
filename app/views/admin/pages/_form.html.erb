@@ -1,7 +1,9 @@
-<%= f.input :title %>
-<%= f.input :slug, label: "Slug (this cannot be updated)" unless @page.id.present? %>
-<%= f.input :content, input_html: { class: 'wysiwyg' } %>
+<%= simple_form_for([:admin, @page]) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :slug, label: "Slug (this cannot be updated)" unless @page.id.present? %>
+  <%= f.input :content, input_html: { class: 'wysiwyg' } %>
 
-<hr>
+  <hr>
 
-<%= f.button :submit %>
+  <%= f.button :submit %>
+<% end %>

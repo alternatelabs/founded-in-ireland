@@ -5,6 +5,7 @@
 
 $(document).ready(function(){
   $('textarea.wysiwyg').redactor({
-    buttons: ['html', 'formatting', 'bold', 'italic']
+    buttons: ['html', 'formatting', 'bold', 'italic'],
+    cleanStyleOnEnter: true
   });
 });

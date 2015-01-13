@@ -3,7 +3,7 @@
 
 <%= render 'nav' %>
 
-<% unless @pages.present? %>
+<% if @pages.empty? %>
 
   <p>No pages have been created yet</p>
 

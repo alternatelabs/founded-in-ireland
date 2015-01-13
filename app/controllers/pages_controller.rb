@@ -7,7 +7,7 @@ class PagesController < ApplicationController
 
   def show
     @page = Page.get_by_slug(params[:slug])
-    raise "Could not find page" unless @page.present?
+    raise ActionController::RoutingError.new('Not Found') unless @page
 
     render 'default'
   end

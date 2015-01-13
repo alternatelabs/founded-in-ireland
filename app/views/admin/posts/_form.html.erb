@@ -1,9 +1,11 @@
-<%= f.input :title %>
-<%= f.input :slug, label: "Slug (this cannot be updated)" unless @post.id.present? %>
-<%= f.input :extract, as: :text %>
-<%= f.input :content, input_html: { class: 'wysiwyg' } %>
-<%= f.input :status, collection: ['draft', 'published'] %>
+<%= simple_form_for([:admin, @post]) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :slug, label: "Slug (this cannot be updated)" unless @post.id.present? %>
+  <%= f.input :extract, as: :text %>
+  <%= f.input :content, input_html: { class: 'wysiwyg' } %>
+  <%= f.input :status, collection: ['draft', 'published'] %>
 
-<hr>
+  <hr>
 
-<%= f.button :submit %>
+  <%= f.button :submit %>
+<% end %>

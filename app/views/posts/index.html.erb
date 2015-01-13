@@ -1,0 +1,20 @@
+<div class="page">
+<% if @posts.empty? %>
+
+  <p>No posts yet!</p>
+
+<% else %>
+
+  <div class="posts-list">
+    <% @posts.each do |post| %>
+      <div class="post-title">
+        <h2><%= post.title %></h2>
+        <p class="date"><%= post.nice_date %></p>
+        <p><%= post.extract %></p>
+        <%= link_to "Read More", blog_post_path(post.slug) %>
+      </div>
+    <% end %>
+  </div>
+
+<% end %>
+</div>

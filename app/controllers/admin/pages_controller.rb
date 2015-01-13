@@ -11,7 +11,7 @@ module Admin
     end
 
     def create
-      @page = Page.create(page_params)
+      @page = Page.new(page_params)
 
       if @page.save
         redirect_to edit_admin_page_path(@page), notice: "New page has been created"
