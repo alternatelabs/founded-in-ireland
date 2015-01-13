@@ -43,6 +43,7 @@ gem 'dotenv-rails', '~> 1.0.2'
 gem 'rest-client', '~> 1.7.2'
 gem 'multi_json', '~> 1.10.1'
 gem 'simple_form'
+gem 'sanitize'
 
 # File uploads
 gem 'paperclip', '~> 4.2'

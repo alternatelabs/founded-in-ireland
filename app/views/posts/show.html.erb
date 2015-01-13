@@ -3,7 +3,7 @@
   <p class="date">Posted on: <%= @post.nice_date %></p>
 
   <div class="post-content">
-    <%= @post.content.html_safe %>
+    <%= sanitize_html(@post.content) %>
   </div>
 
   <div class="post-links">
