@@ -44,6 +44,7 @@ gem 'rest-client', '~> 1.7.2'
 gem 'multi_json', '~> 1.10.1'
 gem 'simple_form'
 gem 'sanitize'
+gem 'rails_12factor', group: :production
 
 # File uploads
 gem 'paperclip', '~> 4.2'
