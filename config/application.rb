@@ -20,6 +20,9 @@ module FoundedInIreland
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    # Autoload validators folder
+    config.autoload_paths << Rails.root.join('app/validators')
+
     # Custom layouts for devise
     config.to_prepare do
       Devise::SessionsController.layout "admin"
