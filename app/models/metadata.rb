@@ -19,12 +19,21 @@ class Metadata < ActiveRecord::Base
     end
 
     group
+
+  rescue NoMethodError => e
+    {}
   end
 
   def self.set_group key, params
     self.send(key).each do |field|
-      self.set(field, params.permit(field).first[1])
+      self.set(field, params[field])
     end
+
+  rescue NoMethodError => e
+    raise GroupNotFound, "No group for key #{key}"
+  end
+
+  class GroupNotFound < StandardError
   end
 
   private
