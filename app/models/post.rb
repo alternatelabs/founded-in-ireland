@@ -1,9 +1,12 @@
 class Post < ActiveRecord::Base
 
+  SLUG_FORMAT = /([[:lower:]]|[0-9]+-?[[:lower:]])(-[[:lower:]0-9]+|[[:lower:]0-9])*/
+
   belongs_to :user
 
   validates_presence_of :title, :slug, :extract, :content, :status
-  validates_uniqueness_of :slug, on: :create
+  validates :slug, uniqueness: {case_sensitive: false},
+                 format: {with: Regexp.new('\A' + SLUG_FORMAT.source + '\z')}, on: :create
 
   def self.published
     where(status: 'published').order(id: :desc)
