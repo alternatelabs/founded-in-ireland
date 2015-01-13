@@ -1,10 +1,8 @@
 class Post < ActiveRecord::Base
 
-
   belongs_to :user
 
   validates_presence_of :title, :slug, :extract, :content, :status
-  #validates :slug, slug: true, on: :create
   validates :slug, uniqueness: {case_sensitive: false}, slug: true, on: :create
 
   def self.published
