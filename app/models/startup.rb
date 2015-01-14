@@ -9,7 +9,7 @@ class Startup < ActiveRecord::Base
     preserve_files: true
 
   validates_attachment_content_type :uploaded_logo, content_type: /\Aimage\/.*\Z/
-  validates_attachment_presence :uploaded_logo
+  # validates_attachment_presence :uploaded_logo
 
 
   def self.get_active
