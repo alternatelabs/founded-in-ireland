@@ -11,6 +11,9 @@
   <%= f.input :twitter, label: 'Twitter handle' %>
   <p>Logo URL: <a href="<%= @startup.logo_url %>" target="_blank"><%= @startup.logo_url %></a></p>
   <%= f.input :uploaded_logo, as: 'file', label: 'Upload Logo' %>
+  <% if @startup.uploaded_logo_file_name.present? %>
+    <%= image_tag @startup.uploaded_logo.url(:standard) %>
+  <% end %>
   <%= f.input :status, collection: ['pending', 'active'] %>
 
   <hr>
