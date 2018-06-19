@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
-ruby "2.2.2"
+
+ruby "2.5.1"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.4'
+gem 'rails', '5.2.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -10,10 +11,6 @@ gem 'sass-rails', '~> 5.0'
 gem 'autoprefixer-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -24,7 +21,7 @@ gem 'turbolinks'
 gem 'spring',        group: :development
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.1.0'
+  gem 'rspec-rails', '~> 3.7.2'
 end
 
 group :test do
@@ -32,14 +29,11 @@ group :test do
 end
 
 gem 'devise'
-gem 'dotenv-rails', '~> 1.0.2'
-gem 'rest-client', '~> 1.7.2'
-gem 'multi_json', '~> 1.10.1'
-gem 'simple_form'
+gem 'dotenv-rails'
+gem 'rest-client'
 gem 'sanitize'
-gem 'rails_12factor', group: :production
 gem 'puma'
 
 # File uploads
-gem 'paperclip', '~> 4.2'
-gem 'aws-sdk', '~> 1.5.7'
+gem 'paperclip', '~> 5.2.1'
+gem 'aws-sdk', '~> 2.10.78'
