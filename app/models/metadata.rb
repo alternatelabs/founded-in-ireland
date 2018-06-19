@@ -39,7 +39,7 @@ class Metadata < ActiveRecord::Base
   private
 
     def self.homepage_group
-      ['homepage_header_content', 'homepage_footer_content']
+      %w[homepage_header_content homepage_footer_content homepage_contact_email]
     end
 
 end

@@ -2,9 +2,13 @@
 <hr>
 
 <%= form_with(url: admin_homepage_edit_path) do |f| %>
-  <% @homepage.each do |key,val| %>
+  <% @homepage.each do |key, val| %>
     <label><%= key.humanize %></label>
-    <textarea name="<%= key %>" class="wysiwyg"><%= val %></textarea>
+    <% if key.match?(/_content\z/) %>
+      <textarea name="<%= key %>" class="wysiwyg"><%= val %></textarea>
+    <% else %>
+      <input type="text" name="<%= key %>" value="<%= val %>">
+    <% end %>
   <% end %>
 
   <input type="submit" value="Update Homepage" />
