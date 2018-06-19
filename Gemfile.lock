@@ -84,8 +84,15 @@ GEM
     ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    http (3.3.0)
+      addressable (~> 2.3)
+      http-cookie (~> 1.0)
+      http-form_data (~> 2.0)
+      http_parser.rb (~> 0.6.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
+    http-form_data (2.1.1)
+    http_parser.rb (0.6.0)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
     jmespath (1.4.0)
@@ -121,7 +128,6 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     msgpack (1.2.4)
-    netrc (0.11.0)
     nio4r (2.3.1)
     nokogiri (1.8.3)
       mini_portile2 (~> 2.3.0)
@@ -176,10 +182,6 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
-    rest-client (2.0.2)
-      http-cookie (>= 1.0.2, < 2.0)
-      mime-types (>= 1.16, < 4.0)
-      netrc (~> 0.8)
     rspec-core (3.7.1)
       rspec-support (~> 3.7.0)
     rspec-expectations (3.7.0)
@@ -262,6 +264,7 @@ DEPENDENCIES
   byebug
   devise
   dotenv-rails
+  http
   jquery-rails
   letter_opener_web (~> 1.3.1)
   listen (~> 3.0.5)
@@ -271,7 +274,6 @@ DEPENDENCIES
   rack-canonical-host
   rack-cloudflare_ip
   rails (= 5.2.0)
-  rest-client
   rspec-rails (~> 3.7.2)
   sanitize
   sass-rails (~> 5.0)
