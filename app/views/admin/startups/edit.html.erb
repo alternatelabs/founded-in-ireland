@@ -1,20 +1,44 @@
 <h2>Edit Startup</h2>
 <hr>
 
-<%= simple_form_for(@startup, url: admin_startup_path, method: :put) do |f| %>
+<%= form_with(model: @startup, url: admin_startup_path, method: :put) do |f| %>
 
-  <%= f.input :name %>
-  <%= f.input :year_founded %>
-  <%= f.input :location %>
-  <%= f.input :description %>
-  <%= f.input :url, label: 'Website URL' %>
-  <%= f.input :twitter, label: 'Twitter handle' %>
-  <p>Logo URL: <a href="<%= @startup.logo_url %>" target="_blank"><%= @startup.logo_url %></a></p>
-  <%= f.input :uploaded_logo, as: 'file', label: 'Upload Logo' %>
-  <% if @startup.uploaded_logo_file_name.present? %>
-    <%= image_tag @startup.uploaded_logo.url(:standard) %>
-  <% end %>
-  <%= f.input :status, collection: ['pending', 'active'] %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="form-group">
+    <%= f.label :year_founded %>
+    <%= f.text_field :year_founded %>
+  </div>
+  <div class="form-group">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+  <div class="form-group">
+    <%= f.label :url, "Website URL" %>
+    <%= f.text_field :url %>
+  </div>
+  <div class="form-group">
+    <%= f.label :twitter, "Twitter handle" %>
+    <%= f.text_field :twitter %>
+  </div>
+  <div class="form-group">
+    <p>Logo URL: <a href="<%= @startup.logo_url %>" target="_blank"><%= @startup.logo_url %></a></p>
+    <%= f.label :uploaded_logo, "Upload Logo" %>
+    <%= f.file_field :uploaded_logo %>
+    <% if @startup.uploaded_logo_file_name.present? %>
+      <%= image_tag @startup.uploaded_logo.url(:standard) %>
+    <% end %>
+  </div>
+  <div class="form-group">
+    <%= f.label :status %>
+    <%= f.select(:status, ['pending', 'active']) %>
+  </div>
 
   <hr>
 
@@ -24,7 +48,7 @@
 
   <hr>
 
-  <%= f.button :submit %>
+  <%= f.submit %>
 
 <% end %>
 

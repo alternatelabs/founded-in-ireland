@@ -1,11 +1,28 @@
-<%= simple_form_for([:admin, @post]) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :slug, label: "Slug (this cannot be updated)" unless @post.id.present? %>
-  <%= f.input :extract, as: :text %>
-  <%= f.input :content, input_html: { class: 'wysiwyg' } %>
-  <%= f.input :status, collection: ['draft', 'published'] %>
+<%= form_with(model: @post, url: [:admin, @post]) do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <% unless @post.persisted? %>
+    <div class="form-group">
+      <%= f.label :slug, "Slug (this cannot be updated)" %>
+      <%= f.text_field :slug %>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <%= f.label :extract %>
+    <%= f.text_area :extract %>
+  </div>
+  <div class="form-group">
+    <%= f.label :content %>
+    <%= f.text_area :content, class: "wysiwyg" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :status %>
+    <%= f.select(:status, ['draft', 'published']) %>
+  </div>
 
   <hr>
 
-  <%= f.button :submit %>
+  <%= f.submit %>
 <% end %>

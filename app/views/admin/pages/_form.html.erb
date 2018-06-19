@@ -1,9 +1,20 @@
-<%= simple_form_for([:admin, @page]) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :slug, label: "Slug (this cannot be updated)" unless @page.id.present? %>
-  <%= f.input :content, input_html: { class: 'wysiwyg' } %>
+<%= form_with(model: @page, url: [:admin, @page]) do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <% unless @page.persisted? %>
+    <div class="form-group">
+      <%= f.label :slug, "Slug (this cannot be updated)" %>
+      <%= f.text_field :slug %>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <%= f.label :content %>
+    <%= f.text_area :content, class: "wysiwyg" %>
+  </div>
 
   <hr>
 
-  <%= f.button :submit %>
+  <%= f.submit %>
 <% end %>
