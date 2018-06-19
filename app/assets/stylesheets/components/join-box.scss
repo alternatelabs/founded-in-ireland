@@ -1,0 +1,40 @@
+.container .join-box {
+  width: 100%;
+  max-width: 60em;
+  margin: 0 auto;
+  clear:both;
+  text-align:center;
+  padding: 3.750em 1.250em 0.250em;
+}
+
+.container .join-box-about {
+  padding: 0em 1.250em 0.250em;
+}
+
+.container .join-box span {
+  font-size:1em;
+  display: block;
+  font-weight: 300;
+  line-height: 1.75;
+  margin: 1.250em 0;
+  letter-spacing: 0.01em;
+}
+
+.container .join-box a.join-button {
+  font-size:1.500em;
+  color: #fff;
+  background:none;
+  padding:0.500em;
+  margin:0.500em;
+  text-decoration: none;
+  -webkit-border-radius: 0.188em;
+  -moz-border-radius: 0.188em;
+  border-radius: 0.188em;
+  border:solid 1px #fff;
+}
+
+.container .join-box a.join-button:hover {
+  color:#2D5241;
+  background-color:#fff;
+  text-decoration: none;
+}

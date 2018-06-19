@@ -1,0 +1,29 @@
+.redactor_box {
+	margin-bottom: 20px;
+
+	.redactor_toolbar {
+	  background: $dark-green;
+
+	  li a {
+	  	background: $dark-green;
+	  	color: #fff;
+	  }
+	  li a:hover {
+	  	background: #000;
+	  	color: #fff;
+	  }
+	}
+
+	.redactor_editor {
+		color: #000;
+
+		a {
+			background: #fff;
+		}
+	}
+}
+
+.redactor_dropdown a {
+	background: #fff;
+	color: #000;
+}

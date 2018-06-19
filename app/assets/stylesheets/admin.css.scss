@@ -1,4 +1,8 @@
-@import "defaults";
-@import "shared";
+@import "base/variables";
+@import "base/reset";
+@import "tachyons";
+@import "base/core";
+@import "base/shared";
 @import "redactor";
-@import "admin-styles";
+@import "components/*";
+@import "admin_components/*";
