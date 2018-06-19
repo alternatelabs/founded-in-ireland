@@ -16,24 +16,34 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+gem 'devise'
+gem 'rest-client'
+gem 'sanitize'
+gem 'bootsnap'
+gem 'puma'
+gem 'rack-canonical-host'
+gem 'rack-cloudflare_ip'
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+# File uploads
+gem 'paperclip', '~> 5.2.1'
+gem 'aws-sdk', '~> 2.10.78'
 
 group :development, :test do
+  gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.7.2'
+  gem 'dotenv-rails'
+end
+
+group :development do
+  gem 'letter_opener_web', '~> 1.3.1'
+  gem 'web-console', '>= 3.3.0'
+  gem 'listen', '~> 3.0.5'
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-commands-rspec'
 end
 
 group :test do
   gem 'shoulda-matchers', require: false
 end
-
-gem 'devise'
-gem 'dotenv-rails'
-gem 'rest-client'
-gem 'sanitize'
-gem 'puma'
-
-# File uploads
-gem 'paperclip', '~> 5.2.1'
-gem 'aws-sdk', '~> 2.10.78'
