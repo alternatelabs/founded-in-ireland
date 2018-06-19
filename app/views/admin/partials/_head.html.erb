@@ -1,8 +1,8 @@
 <ul class="admin-nav">
 	<li><%= link_to "Startups", admin_startups_path %></li>
-  <li><%= link_to "Edit Homepage", admin_homepage_edit_path %></li>
   <li><%= link_to "Pages", admin_pages_path %></li>
   <li><%= link_to "Posts", admin_posts_path %></li>
+  <li><%= link_to "General Settings", admin_homepage_edit_path %></li>
 
 	<li class="right">
 		<p class="right-text">Signed in as <%= current_user.email %> | <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></p>
