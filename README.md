@@ -10,18 +10,18 @@ Before you can deploy you need to setup a typeform, this allows startups to join
 
 2. Setup a form with the following questions and field types (you can use different wording for the answers):
 
-| Field type | Question                       |
-| ---------- |:------------------------------:|
-| Short text | What’s your startup called?    |
-| Number     | What year was it founded?      |
-| Short text | Where are you based?           |
-| Long text  | What does your startup do?     |
-| Website    | What is your website?          |
-| Short text | What is your twitter username? |
-| Website    | URL of your logo               |
-| Short text | And your name is?              |
-| Email      | And your email address?        |
-| Long text  | Anything else you want to add? |
+    | Field type | Question                       |
+    | ---------- |:------------------------------:|
+    | Short text | What’s your startup called?    |
+    | Number     | What year was it founded?      |
+    | Short text | Where are you based?           |
+    | Long text  | What does your startup do?     |
+    | Website    | What is your website?          |
+    | Short text | What is your twitter username? |
+    | Website    | URL of your logo               |
+    | Short text | And your name is?              |
+    | Email      | And your email address?        |
+    | Long text  | Anything else you want to add? |
 
 3. Setting up field mapping
 
