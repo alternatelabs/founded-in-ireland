@@ -64,7 +64,7 @@ Before you can deploy you need to setup a typeform, this allows startups to join
 
     Use this for the `TYPEFORM_URL` property when deploying
 
-5. Take your form ID from the username above, it is the last segment of the URL, usually 5-8 characaters long. Use this for the `TYPEFORM_UID` property when deploying.
+5. Take your form ID from the URL above, it is the last segment of the URL, usually 5-8 characaters long. Use this for the `TYPEFORM_UID` property when deploying.
 
 6. In **My Account** (click your initials in the top right corner) create a personal access token and use it for the `TYPEFORM_ACCESS_TOKEN` property when deploying.
 
