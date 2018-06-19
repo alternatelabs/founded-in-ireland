@@ -1,0 +1,22 @@
+.fancy-links {
+  a {
+    color: #fff;
+    background-color: $dark-green;
+    padding: 0.188em;
+    text-decoration: none;
+    -webkit-border-radius: 0.188em;
+    -moz-border-radius: 0.188em;
+    border-radius: 0.188em;
+
+    &:hover {
+      color: #fff;
+      background: none;
+      text-decoration: underline;
+    }
+  }
+
+  a.no-link {
+    background: none;
+    padding: 0;
+  }
+}

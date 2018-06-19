@@ -1,8 +1,12 @@
-<h2>Edit Startup</h2>
+<div class="flex mt5">
+  <h2 class="flex-auto ma0">Edit Startup</h2>
+  <div class="ml5 self-center">
+    <%= link_to "Cancel", admin_startups_path, class: "no-underline bg-light-silver white fw7 pa3 bn br2 pointer tracked f6 ttu" %>
+  </div>
+</div>
 <hr>
 
-<%= form_with(model: @startup, url: admin_startup_path, method: :put) do |f| %>
-
+<%= form_with(model: @startup, url: admin_startup_path, method: :put, class: "mw7") do |f| %>
   <div class="form-group">
     <%= f.label :name %>
     <%= f.text_field :name %>
@@ -27,12 +31,16 @@
     <%= f.label :twitter, "Twitter handle" %>
     <%= f.text_field :twitter %>
   </div>
-  <div class="form-group">
-    <p>Logo URL: <a href="<%= @startup.logo_url %>" target="_blank"><%= @startup.logo_url %></a></p>
-    <%= f.label :uploaded_logo, "Upload Logo" %>
-    <%= f.file_field :uploaded_logo %>
+  <div class="form-group flex items-center">
+    <div class="flex-auto mr5">
+      <%= f.label :uploaded_logo, "Upload Logo" %>
+      <%= f.file_field :uploaded_logo %>
+      <p>Logo URL: <a href="<%= @startup.logo_url %>" target="_blank"><%= @startup.logo_url %></a></p>
+    </div>
     <% if @startup.uploaded_logo_file_name.present? %>
-      <%= image_tag @startup.uploaded_logo.url(:standard) %>
+      <div class="bg-dark-green">
+        <%= image_tag @startup.uploaded_logo.url(:standard), class: "mw4" %>
+      </div>
     <% end %>
   </div>
   <div class="form-group">
@@ -48,8 +56,10 @@
 
   <hr>
 
-  <%= f.submit %>
+  <div class="flex items-center mt4">
+    <%= f.submit "Save Changes", class: "bg-near-black white fw7 pa3 bn br2 pointer tracked f6 ttu" %>
+    <%= link_to 'Delete Startup', admin_startup_path(@startup), method: :delete, class: 'delete', "data-confirm" => "Are you sure you want to delete this?", class: "ml7 red" %>
+  </div>
 
 <% end %>
 
-<%= link_to 'Delete Startup', admin_startup_path(@startup), method: :delete, class: 'delete', "data-confirm" => "Are you sure you want to delete this?" %>

@@ -1,5 +1,4 @@
-.main,
-.container > footer {
+.page-footer {
   width: 100%;
   max-width: 60em;
   margin: 0 auto;
@@ -8,7 +7,7 @@
   padding: 3.125em 3.125em 0;
 }
 
-.container > footer span {
+.page-footer span {
   font-size:0.750em;
   display: block;
   font-weight: 300;
@@ -17,7 +16,7 @@
   letter-spacing: 0.01em;
 }
 
-.container > footer img {
+.page-footer img {
   height:5.000em;
   margin:2.500em 0;
 }

@@ -19,7 +19,7 @@
 
     <meta name="author" content="Alternate Labs" />
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
 
     <title>Founded In Ireland</title>
 
@@ -38,54 +38,47 @@
     <%= csrf_meta_tags %>
 </head>
 
+<body class="frontend">
+  <div class="container">
 
-  <body>
-    <div class="container">
+    <%= render "partials/flash_messages" %>
 
-      <%= render "partials/flash_messages" %>
-
-      <header class="clearfix">
-        <%= link_to image_tag("fii-logo.png", width: 500, alt: "Founded in Ireland"), root_path, class: "no-link" %>
-        <%= yield :header_content %>
-  		</header>
+    <header class="page-header clearfix">
+      <%= link_to image_tag("fii-logo.png", width: 500, alt: "Founded in Ireland"), root_path, class: "no-link" %>
+      <%= yield :header_content %>
+    </header>
 
 
-      <div class="page-content">
-        <div class="wrapper">
-          <%= yield %>
+    <div class="page-content">
+      <div class="wrapper">
+        <%= yield %>
 
-          <div class="join-box">
-            <a name="join" class="no-link"></a>
-            <%= yield :footer_content %>
+        <div class="join-box fancy-links">
+          <a name="join" class="no-link"></a>
+          <%= yield :footer_content %>
 
-            <div>
-              <span style="display:inline;"><a class="typeform-share link join-button" href="<%= ENV["TYPEFORM_URL"] %>" data-mode="2" target="_blank">Join&nbsp;the&nbsp;list</a></span>
-            </div>
-            <br><br>
-            <span>Follow on <a href="https://twitter.com/<%= Metadata.get 'twitter_username' %>" target="_blank"><i class="fa fa-twitter-square"></i>&nbsp;Twitter</a>
-               &nbsp;&middot;&nbsp; <a class="typeform-share link" href="<%= ENV["TYPEFORM_URL"] %>" data-mode="2" target="_blank">Join&nbsp;the&nbsp;list</a>
-               &nbsp;&middot;&nbsp; <a href="mailto:<%= Metadata.get 'contact_email' %>?subject=Founded%20in%20Ireland" target="_blank">Contact</a></span>
-
-            <div align="center" style="width:170px; margin:0 auto;">
-                <div style="padding:5px;"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://foundedinireland.com/" data-via="foundedireland" data-count="none" data-dnt="true">Tweet</a></div>
-            </div>
+          <div>
+            <span style="display:inline;"><a class="typeform-share link join-button" href="<%= ENV["TYPEFORM_URL"] %>" data-mode="2" target="_blank">Join&nbsp;the&nbsp;list</a></span>
           </div>
+          <br><br>
+          <span>Follow on <a href="https://twitter.com/<%= Metadata.get 'twitter_username' %>" target="_blank"><i class="fa fa-twitter-square"></i>&nbsp;Twitter</a>
+              &nbsp;&middot;&nbsp; <a class="typeform-share link" href="<%= ENV["TYPEFORM_URL"] %>" data-mode="2" target="_blank">Join&nbsp;the&nbsp;list</a>
+              &nbsp;&middot;&nbsp; <a href="mailto:<%= Metadata.get 'contact_email' %>?subject=Founded%20in%20Ireland" target="_blank">Contact</a></span>
         </div>
       </div>
-
-      <footer>
-			  <span>All the logos and trademarks used on this website belong to its rightful owner.<br></span>
-			  <span>This platform is <a href="https://github.com/alternatelabs/founded-in-ireland">Open Source</a> &ndash; built by <a href="https://alternatelabs.co">Alternate Labs</a><br></span>
-			    <a href="http://foundedx.com" class="no-link" target="_blank">
-			    	<%= image_tag "foundedx-badge.png", alt: "FoundedX" %>
-			    </a>
-			</footer>
     </div>
 
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <footer class="page-footer fancy-links">
+      <span>All the logos and trademarks used on this website belong to its rightful owner.<br></span>
+      <span>This platform is <a href="https://github.com/alternatelabs/founded-in-ireland">Open Source</a> &ndash; built by <a href="https://alternatelabs.co">Alternate Labs</a><br></span>
+        <a href="http://foundedx.com" class="no-link" target="_blank">
+          <%= image_tag "foundedx-badge.png", alt: "FoundedX" %>
+        </a>
+    </footer>
+  </div>
 
-    <!-- TODO google analytics -->
+  <%= javascript_include_tag 'application' %>
 
-  </body>
-
+  <%# TODO google analytics %>
+</body>
 </html>

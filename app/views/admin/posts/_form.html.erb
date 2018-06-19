@@ -1,4 +1,4 @@
-<%= form_with(model: @post, url: [:admin, @post]) do |f| %>
+<%= form_with(model: @post, url: [:admin, @post], class: "mw7") do |f| %>
   <div class="form-group">
     <%= f.label :title %>
     <%= f.text_field :title %>
@@ -24,5 +24,10 @@
 
   <hr>
 
-  <%= f.submit %>
+  <div class="flex items-center mt4">
+    <%= f.submit class: "bg-near-black white fw7 pa3 bn br2 pointer tracked f6 ttu" %>
+    <% if @post.persisted? %>
+      <%= link_to 'Delete Post', admin_post_path(@post), method: :delete, class: 'delete', "data-confirm" => "Are you sure you want to delete this?", class: "ml7 red" %>
+    <% end %>
+  </div>
 <% end %>

@@ -1,5 +1,7 @@
 <% content_for :header_content do %>
-  <%= @homepage['homepage_header_content'].html_safe %>
+  <div class="fancy-links">
+    <%= @homepage['homepage_header_content'].html_safe %>
+  </div>
 <% end %>
 
 <ul class="cbp-rfgrid">
@@ -18,5 +20,7 @@
 </ul>
 
 <% content_for :footer_content do %>
-  <%= @homepage['homepage_footer_content'].html_safe %>
+  <div class="fancy-links">
+    <%= @homepage['homepage_footer_content'].html_safe %>
+  </div>
 <% end %>

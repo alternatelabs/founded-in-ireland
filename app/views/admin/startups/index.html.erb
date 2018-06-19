@@ -1,4 +1,9 @@
-<h2>List Startups</h2>
+<div class="flex mt5">
+  <h2 class="flex-auto ma0">All Startups</h2>
+  <div class="ml5 self-center">
+    <%#= link_to "New Startup", new_admin_startup_path, class: "no-underline bg-blue white fw7 pa3 bn br2 pointer tracked f6 ttu" %>
+  </div>
+</div>
 <hr>
 
 <% unless @startups.present? %>
