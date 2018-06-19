@@ -81,6 +81,16 @@ Ensure you have the correct ruby version (check .ruby-version) and [PostgreSQL](
 $ bin/setup
 ```
 
+### Pull down a copy of the live database
+
+Make sure to substitue your heroku app name and database name from `config/database.yml`
+
+```sh
+$ heroku pg:backups:capture
+$ curl -o latest.dump `heroku pg:backups public-url -a foundedireland`
+$ pg_restore --verbose --clean --no-acl --no-owner -h localhost -d foundedireland_dev latest.dump
+```
+
 ## MIT License
 
 Copyright (c) 2015 Alternate Labs Ltd
