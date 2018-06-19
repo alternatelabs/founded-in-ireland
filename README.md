@@ -70,7 +70,7 @@ Before you can deploy you need to setup a typeform, this allows startups to join
 
 Using the information above you can now deploy. [Please contact us](mailto:hello@alternatelabs.co?subject=Help%20setting%20up%20founded-rails) if you run into any problems or require additional features or help setting up.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/openhq/openhq)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/alternatelabs/founded-in-ireland)
 
 ## Running the app in development
 
