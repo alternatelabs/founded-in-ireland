@@ -1,0 +1,36 @@
+{
+  "name": "Founded X Template",
+  "description": "Open source template for foundedx.com sites",
+  "website": "https://alternatelabs.co/",
+  "repository": "https://github.com/alternatelabs/founded-in-ireland",
+  "keywords": [
+    "foundedx",
+    "startups"
+  ],
+  "scripts": {
+    "postdeploy": "bin/rake db:migrate db:seed"
+  },
+  "env": {
+    "TYPEFORM_URL": {
+      "description": "Public URL to your typeform - https://foundedinireland1.typeform.com/to/yI1dff",
+      "required": true
+    },
+    "TYPEFORM_UID": {
+      "description": "Typeforms ID",
+      "required": true
+    },
+    "TYPEFORM_ACCESS_TOKEN": {
+      "description": "Typeform personal access token",
+      "required": true
+    },
+    "TYPEFORM_FIELD_IDS_TO_NAMES": {
+      "description": "Mapping of your typeform field IDs to names, see the readme",
+      "required": true
+    }
+  },
+  "addons": [
+    "heroku-postgresql:hobby-dev",
+    "scheduler:standard",
+    "bucketeer:hobbyist"
+  ]
+}
