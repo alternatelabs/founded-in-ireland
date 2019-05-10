@@ -1,15 +1,20 @@
-<h2>General Settings</h2>
+<div class="flex mt5">
+  <h2 class="flex-auto ma0">General Settings</h2>
+</div>
 <hr>
 
-<%= form_with(url: admin_homepage_edit_path) do |f| %>
+
+<%= form_with(url: admin_homepage_edit_path, class: "mw7") do |f| %>
   <% @homepage.each do |key, val| %>
-    <label><%= key.humanize %></label>
-    <% if key.match?(/_content\z/) %>
-      <textarea name="<%= key %>" class="wysiwyg"><%= val %></textarea>
-    <% else %>
-      <input type="text" name="<%= key %>" value="<%= val %>">
-    <% end %>
+    <div class="mb4">
+      <label class="db mb2"><%= key.humanize %></label>
+      <% if key.match?(/_content\z/) %>
+        <textarea name="<%= key %>" class="wysiwyg"><%= val %></textarea>
+      <% else %>
+        <input type="text" name="<%= key %>" value="<%= val %>">
+      <% end %>
+    </div>
   <% end %>
 
-  <input type="submit" value="Save Changes" />
+  <%= f.submit "Save Changes", class: "bg-near-black white fw7 pa3 bn br2 pointer mt4 tracked f6 ttu" %>
 <% end %>

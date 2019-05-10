@@ -1,3 +1,6 @@
-@import "defaults";
-@import "components";
-@import "shared";
+@import "base/variables";
+@import "base/reset";
+@import "tachyons";
+@import "base/core";
+@import "base/shared";
+@import "components/*";

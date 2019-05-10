@@ -1,19 +1,22 @@
-<h2>List Posts</h2>
+<div class="flex mt5">
+  <h2 class="flex-auto ma0">All Blog Posts</h2>
+  <div class="ml5 self-center">
+    <%= link_to "New Post", new_admin_post_path, class: "no-underline bg-blue white fw7 pa3 bn br2 pointer tracked f6 ttu" %>
+  </div>
+</div>
 <hr>
-
-<%= render 'nav' %>
 
 <% unless @posts.present? %>
   <p>No posts created yet.</p>
 <% else %>
 
-  <table>
+  <table cellspacing="0">
     <thead>
       <tr>
-        <td>Post Title</td>
-        <td>Post Slug</td>
-        <td>Status</td>
-        <td>Options</td>
+        <th>Post Title</th>
+        <th>Post Slug</th>
+        <th>Status</th>
+        <th>Options</th>
       </tr>
     </thead>
     <tbody>

@@ -1,0 +1,40 @@
+$font-stack: 'Lato', Calibri, Arial, sans-serif;
+
+/*
+ *  Tachyons overrides
+ *
+ *  You can override tachyons using any of the variables defined here:
+ *  https://github.com/tachyons-css/tachyons-sass/blob/master/scss/_variables.scss
+ */
+// $font-size-headline: 6rem;
+// $font-size-subheadline: 5rem;
+// $font-size-1: 40px;
+$font-size-2: 27px;
+$font-size-3: 21px;
+$font-size-4: 18px;
+$font-size-5: 16px;
+$font-size-6: 14px;
+$font-size-7: 12px;
+$line-height-copy: 1.75;
+// $letter-spacing-1: 0.05em;
+
+// Spacing
+$spacing-none: 0 !default;
+$spacing-extra-small: 3px;
+$spacing-small: 6px;
+$spacing-medium: 10px;
+$spacing-large: 16px;
+$spacing-extra-large: 30px;
+$spacing-extra-extra-large: 40px;
+$spacing-extra-extra-extra-large: 60px;
+// $spacing-copy-separator: 1.5em !default;
+
+// Color overrides
+$red: #af0909;
+$dark-green: #233f32;
+$green: #2D5241;
+
+// Custom Media Query Variables
+$breakpoint-not-small: 'screen and (min-width: 30em)';
+$breakpoint-medium: 'screen and (min-width: 30em) and (max-width: 60em)';
+$breakpoint-large: 'screen and (min-width: 60em)';

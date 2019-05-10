@@ -1,6 +1,9 @@
-<h2>New Post</h2>
+<div class="flex mt5">
+  <h2 class="flex-auto ma0">New Blog Post</h2>
+  <div class="ml5 self-center">
+    <%= link_to "Cancel", admin_posts_path, class: "no-underline bg-light-silver white fw7 pa3 bn br2 pointer tracked f6 ttu" %>
+  </div>
+</div>
 <hr>
-
-<%= render 'nav' %>
 
 <%= render 'form' %>

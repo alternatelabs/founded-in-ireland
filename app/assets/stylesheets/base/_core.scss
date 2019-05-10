@@ -1,0 +1,52 @@
+body, html { font-size: 100%;   padding: 0; margin: 0;}
+
+body {
+  font-family: $font-stack;
+  line-height: $line-height-copy;
+}
+
+body.frontend {
+  font-weight: 300;
+  color: #ffffff;
+  background-color: $green;
+}
+
+hr {
+  border: none;
+  border-bottom: solid 1px #d7d7d7;
+  height: 0;
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+textarea {
+  min-height: 160px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+  display: block;
+  padding: 12px;
+  font-size: 1rem;
+  font-family: $font-stack;
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: 2px;
+  -webkit-appearance: none;
+}
+
+form label {
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 20px;
+}

@@ -17,8 +17,9 @@
     <meta name="twitter:site" content="@foundedireland" />
     <meta name="twitter:title" content="Founded in Ireland - The most innovative startups in Ireland" />
 
-    <meta name="author" content="Andrew Fulton" />
-    <%= stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track' => true %>
+    <meta name="author" content="Alternate Labs" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <%= stylesheet_link_tag 'admin', media: 'all' %>
 
     <%# <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"> %>
 
@@ -39,30 +40,30 @@
     <%= csrf_meta_tags %>
 </head>
 
+<body class="bg-light-gray">
+  <%= render "partials/flash_messages" %>
 
-  <body>
-    <div class="container">
-
-      <%= render "partials/flash_messages" %>
-
-      <header class="clearfix">
-            <%= link_to image_tag("fii-logo.png", width: 500, alt: "Founded in Ireland"), root_path, class: "no-link" %>
-
-			<h1>Founded in Ireland - The most innovative startups in Ireland</h1>
-		</header>
-
-	    <div class="page-content admin">
-        <%= render 'admin/partials/head' if current_user.present? %>
-	      <div class="wrapper">
-	        <%= yield %>
-	      </div>
-	    </div>
+  <% if current_user.present? %>
+    <div class="bg-white pa4">
+      <div class="mw8 flex items-center center dark-green f6">
+        <span class="fw7 mr5 ttu f6 tracked">Admin</span>
+        <% link_styles = "no-underline mr5 green f6 fw4 dim" %>
+        <%= link_to "Startups", admin_startups_path, class: link_styles %>
+        <%= link_to "Pages", admin_pages_path, class: link_styles %>
+        <%= link_to "Posts", admin_posts_path, class: link_styles %>
+        <%= link_to "General Settings", admin_homepage_edit_path, class: link_styles %>
+        <span class="flex-auto tr">
+          Signed in as <%= current_user.email %>&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: link_styles %>
+        </span>
+      </div>
     </div>
+  <% end %>
 
-    <%= javascript_include_tag 'admin', 'data-turbolinks-track' => true %>
+  <div class="mw8 center mb5">
+    <%= yield %>
+  </div>
 
-    <!-- TODO google analytics -->
-
-  </body>
-
+  <%= javascript_include_tag "admin" %>
+</body>
 </html>

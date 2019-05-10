@@ -1,7 +1,11 @@
-<h2>List Pages</h2>
+<div class="flex mt5">
+  <h2 class="flex-auto ma0">All Pages</h2>
+  <div class="ml5 self-center">
+    <%= link_to "New Page", new_admin_page_path, class: "no-underline bg-blue white fw7 pa3 bn br2 pointer tracked f6 ttu" %>
+  </div>
+</div>
 <hr>
 
-<%= render 'nav' %>
 
 <% if @pages.empty? %>
 
@@ -9,12 +13,12 @@
 
 <% else %>
 
-  <table>
+  <table cellspacing="0">
     <thead>
       <tr>
-        <td>Page Title</td>
-        <td>Page Slug</td>
-        <td>Options</td>
+        <th>Page Title</th>
+        <th>Slug</th>
+        <th>Options</th>
       </tr>
     </thead>
     <tbody>
